@@ -4,7 +4,7 @@ date: 2018-03-01T13:02:05+08:00
 draft: false
 ---
 
-golang slice append
+# golang slice append
 
 ```
 func TestSliceAppend(t *testing.T) {
@@ -60,94 +60,17 @@ d:			 [1 2 6 7 8]
 len(d):			 5
 cap(d):			 6
 ```
-
-
-
-```golang
-func BenchmarkSliceAppend(b *testing.B) {
-    a := make([]int, 0, b.N)
-    for i := 0; i < b.N; i++ {
-        a = append(a, i)
-        if i % 1000000 == 0 {
-            fmt.Println("cap(a)", cap(a))
-        }
-
-    }
-}
-/*
-cap(a) 1
-goos: darwin
-goarch: amd64
-pkg: tests
-cap(a) 100
-cap(a) 10000
-cap(a) 1000000
-cap(a) 100000000
-...
-100000000	        10.3 ns/op
-PASS
-*/
-
-func BenchmarkSliceAppendDynamic(b *testing.B) {
-    a := make([]int, 0)
-    for i := 0; i < b.N; i++ {
-        a = append(a, i)
-        if i % 1000000 == 0 {
-            fmt.Println("cap(a)", cap(a))
-        }
-    }
-}
-/*
-cap(a) 1
-...
-cap(a) 1136640
-cap(a) 2221056
-cap(a) 3471360
-cap(a) 4339712
-cap(a) 5425152
-cap(a) 6781952
-...
-cap(a) 10597376
-cap(a) 10597376
-cap(a) 13247488
-...
-cap(a) 16560128
-...
-cap(a) 20700160
-...
-cap(a) 1
-cap(a) 1136640
-cap(a) 2221056
-cap(a) 3471360
-cap(a) 4339712
-cap(a) 5425152
-cap(a) 6781952
-cap(a) 8477696
-...
-cap(a) 10597376
-...
-cap(a) 13247488
-...
-cap(a) 16560128
-...
-cap(a) 20700160
-...
-cap(a) 25875456
-...
-cap(a) 32345088
-...
-cap(a) 40431616
-...
-cap(a) 50539520
-...
-cap(a) 63174656
-...
-cap(a) 78968832
-...
-cap(a) 98711552
-...
-cap(a) 123389952
-100000000	        32.1 ns/op
-PASS
-*/
+上面的例子中比较奇怪的是，有的`append`改变了原数组的值，有的没有改变原数组的值。
+先看一下，golang中slice的数据结构：
 ```
+type slice struct{
+	int len,
+	int cap,
+	*T p
+}
+```
+其中p指向一个c语言中的数组，len表示当前slice的长度，而cap表示p指向的数组的长度。
+
+当执行`append`操作时，如果当前数组cap满足需求，则不会申请新的数组，`append`会创建新的slice对象，但是p会指向原来的数组，这就解释了`append(a[:2], 5)`的结果。
+
+如果当前数组的cap不满足`append`的需求时，会创建新的数组，`append`返回新的slice中的p会指向新的数组，这里解释`append(a[:2], [6,7,8])`的结果。
