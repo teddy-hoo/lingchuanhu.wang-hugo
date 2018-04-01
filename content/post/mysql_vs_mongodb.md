@@ -1,5 +1,5 @@
 ---
-title: "缓冲区溢出"
+title: "mysql vs mongodb"
 date: 2018-04-01T13:02:05+08:00
 draft: false
 ---
