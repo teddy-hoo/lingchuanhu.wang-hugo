@@ -5,7 +5,6 @@ newContentEditor = "vi"
 theme = "nofancy"
 pygmentsStyle = "native"
 
-languageCode = "en"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 enableEmoji = true
