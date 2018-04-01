@@ -2,7 +2,6 @@ baseURL = "http://lingchuanhu.wang/"
 languageCode = "en-us"
 title = "Lingchuan's Site"
 newContentEditor = "vi"
-theme = "nofancy"
 pygmentsStyle = "native"
 
 defaultContentLanguage = "en"
