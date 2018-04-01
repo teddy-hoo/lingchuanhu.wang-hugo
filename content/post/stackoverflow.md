@@ -2,6 +2,8 @@
 title: "缓冲区溢出"
 date: 2018-04-01T13:02:05+08:00
 draft: false
+tags: ["基础知识"]
+categories: ["操作系统"]
 ---
 # 缓冲区溢出
 

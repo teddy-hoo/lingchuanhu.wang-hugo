@@ -2,6 +2,8 @@
 title: "golang slice"
 date: 2018-03-01T13:02:05+08:00
 draft: false
+tags: ["语言设计坑"]
+categories: ["编程语言"]
 ---
 
 # golang slice append
