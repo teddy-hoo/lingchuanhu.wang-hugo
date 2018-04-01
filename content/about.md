@@ -6,4 +6,5 @@ draft: false
 
 # Lingchuan's Site
 
-Hello world!
+A programmer.
+
