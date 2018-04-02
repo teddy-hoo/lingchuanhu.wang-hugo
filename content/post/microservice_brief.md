@@ -1,6 +1,6 @@
 ---
 title: "文件描述符"
-date: 2018-04-01T13:02:05+08:00
+date: 2018-04-02T21:43:05+08:00
 draft: false
 tags: ["基础知识"]
 categories: ["WEB架构"]
