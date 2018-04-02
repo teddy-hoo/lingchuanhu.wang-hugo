@@ -5,4 +5,4 @@ draft: false
 tags: ["基础知识"]
 categories: ["WEB架构"]
 ---
-<iframe src="//slides.com/teddy-hoo/deck-3/embed#/28" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//slides.com/teddy-hoo/deck-3/embed?style=light#/28" width="700" height="500" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
