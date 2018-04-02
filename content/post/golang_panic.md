@@ -3,7 +3,7 @@ title: "golang panic and recover"
 date: 2018-04-02T22:32:05+08:00
 draft: false
 tags: ["语言设计坑"]
-categories: ["操作系统"]
+categories: ["编程语言"]
 ---
 
 # golang panic and recover
