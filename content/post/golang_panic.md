@@ -114,3 +114,11 @@ Process finished with exit code 2
 
 第一个例子中，f 和 recover在同一个goroutine中，panic被recover了，程序正常执行。
 而不在一个goroutine时，即使f看上去是g的子协程，但是并不会被捕捉到。
+
+# 使用建议
+
+> https://github.com/golang/go/wiki/CodeReviewComments#dont-panic
+
+代码中不要使用panic，使用err，这样可以保证程序会按照代码逻辑执行，不会goto。
+<br>
+goroutine的逻辑要清晰，生命周期明显，这样，在一些重要的，不允许crash或者crash会导致未知结果的goroutine中使用defer recover的方式来保证其稳定性。
