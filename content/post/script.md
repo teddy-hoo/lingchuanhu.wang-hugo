@@ -1,6 +1,6 @@
 ---
 title: "Make your script robust"
-date: 2018-04-06T22:02:05+08:00
+date: 2018-04-05T22:02:05+08:00
 draft: false
 tags: ["实战经验"]
 categories: ["系统设计"]
