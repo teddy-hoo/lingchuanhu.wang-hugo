@@ -7,3 +7,6 @@ categories: ["JAVA"]
 ---
 
 JVM https://www.cnblogs.com/lishun1005/p/6019678.html
+
+Annotation https://www.cnblogs.com/skywang12345/p/3344137.html
+
