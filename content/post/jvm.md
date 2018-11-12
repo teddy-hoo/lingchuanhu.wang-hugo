@@ -11,3 +11,7 @@ JVM https://www.cnblogs.com/lishun1005/p/6019678.html
 Annotation https://www.cnblogs.com/skywang12345/p/3344137.html
 
 JPA https://www.cnblogs.com/dreamroute/p/5173896.html
+
+IOC AOP
+
+Reflector
