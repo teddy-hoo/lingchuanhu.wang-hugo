@@ -17,3 +17,5 @@ IOC AOP
 Reflector
 
 maven pom.xml https://www.cnblogs.com/sharpest/p/7738444.html
+
+GC and memory management https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/
