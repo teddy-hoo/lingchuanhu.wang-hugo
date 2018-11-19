@@ -18,6 +18,8 @@ Reflector
 
 maven pom.xml https://www.cnblogs.com/sharpest/p/7738444.html
 
-GC and memory management https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/
+#### GC and memory management 
+- https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/
+- https://betsol.com/2017/06/java-memory-management-for-java-virtual-machine-jvm/
 
 zookeeper 分布式锁   https://blog.csdn.net/qiangcuo6087/article/details/79067136
